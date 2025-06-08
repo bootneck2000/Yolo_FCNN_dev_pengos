@@ -13,4 +13,7 @@ https://data.aad.gov.au/metadata/PENGUIN_DET_VAPCOL
 
 There are additional files here - "Roldan_train" and "Roldan_test".  These are Faster RCNN modified to work with ringed seal annotated datasets for Alberto Roldans Masters thesis in Roboflow.  The "training" file needs modifying such that the polygon labels used in Roboflow are converted to box labels, and used for training. 
 
+Further - the model is not trained with distractors, only positive labelled objects.  Future iterations of the Roldan_train should include significant distrators.  For this, the code needs altering to include the treatment of training images with no labels. 
+
 The "test" model relies on the trained model being saved to google drive, then recalled back into a fresh Colab session. 
+
